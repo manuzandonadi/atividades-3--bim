@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenar</title>
+</head>
+<body>
+    <h1>Vamos colocar os tres numeros em ordem crescente</h1>
+    <h2>independente dos valores que forem digitados em cada campo</h2>
+    <div>
+        <p>Informe um numero <input type="number" placeholder="somente números inteiros" name="n1" id="n1"></p>
+        <p>Informe outro numero <input type="number" placeholder="somente números inteiros" name="n2" id="n2"></p>
+        <p>Informe outro numero <input type="number" placeholder="somente números inteiros" name="n3" id="n3"></p>
+        <button onclick="ordenar()">Ordenar</button>
+        <p><label id="resultado"></label></p>
+    </div>
+        
+        <script>
+            //ler os dados informados pelo usuário
+            function ordenar(){
+                var n1 = document.getElementById('n1').value
+                var n2 = document.getElementById('n2').value
+                var n3 = document.getElementById('n3').value
+
+            //Processamento das informações
+
+                var saida = '' //tudo q colocar aqui vai aparecer
+
+                if (n1 == n2 && n2 == n3){
+                    saida = "Os números são iguais"
+                }
+                
+                else if(n1 < n2 && n2 < n3){
+                    saida = `${n1}, ${n2}, ${n3}`
+                }
+                else if(n1 < n3 && n3 < n2){
+                    saida = `${n1}, ${n3}, ${n2}`
+                }
+                else if(n2 < n1 && n1 < n3){
+                    saida = `${n2}, ${n1}, ${n3}`
+                }
+                else if(n2 < n3 && n3 < n1){
+                    saida = `${n2}, ${n3}, ${n1}`
+                }
+                else if(n3 < n1 && n1 < n2){
+                    saida = `${n3}, ${n1}, ${n2}`
+                }
+                else{
+                    saida = `${n3}, ${n2}, ${n1}`
+                }
+                
+            //Resultado final após o processamento
+                document.getElementById('resultado').innerText = saida
+                alert(saida)  
+            }
+            
+        </script>
+</body>
+</html>

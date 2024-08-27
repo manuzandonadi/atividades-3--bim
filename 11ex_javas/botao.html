@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contagem curtidas</title>
+</head>
+<body>
+   
+    <button onclick="curti()" id="curti">curti</button>
+    <button onclick="ncurti()" id="ncurti">não curti</button>
+
+</body>
+<script>
+    var curti = 0
+    var ncurti = 0
+   
+
+    function curti() {
+        var saida = " "
+ 
+
+        var curtidas = document.getElementById('curti').value 
+        curti = curti + 1
+
+    }
+
+    function ncurti(){
+
+
+        var ncurtidas = document.getElementById('ncurti').value 
+        ncurti = ncurti + 1
+
+    }
+
+
+    saida = `curtidas: ${curti} não curtidas: ${ncurti}`
+    
+
+
+
+
+
+</script>
+
+
+</html> 

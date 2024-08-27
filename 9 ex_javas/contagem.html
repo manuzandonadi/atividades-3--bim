@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contagem maioridade</title>
+</head>
+<body>
+    <h3>informe a idade <input placeholder="somente números" type="number" id="idade"> <b> <label id="resultado"> </label></b> </h3>
+    <button onclick="contagem()">contar</button>
+</body>
+<script>
+    var maior = 0
+    var menor = 0
+
+    function contagem() {
+        
+    var saida = ' '
+
+    //ler as idades
+    var idade = document.getElementById('idade').value 
+
+    //classificar os individuos
+    if(idade >= 18){
+        maior = maior + 1
+
+    }
+    else{
+        menor = menor + 1
+    }
+
+    //atualizar a contagem 
+    saida = `maiores: ${maior} menores: ${menor}`
+    document.getElementById('resultado').innerText = saida
+
+}
+
+
+</script>
+
+
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>like button</title>
+
+    
+    <style>
+        button{
+    background-color: transparent;
+    border: 0;
+    font-size: 50px;
+    align-items: center;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <button id="like" onclick="gostei()">❤️</button>
+        <p> <label id="resultlike"></label></p>
+        <button id="deslike" onclick="ngostei()">💔</button>
+        <p> <label id="resultdeslike"></label></p>
+    </div>
+
+    <script>
+        var like = 0
+        var deslike = 0
+        function gostei(){
+            
+            like = like + 1 
+            saida = `${like}`
+            document.getElementById('resultlike').innerText = saida
+        }
+
+        function ngostei(){
+
+            deslike = deslike + 1
+            saida = `${deslike}`
+            document.getElementById('resultdeslike').innerText = saida
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>
